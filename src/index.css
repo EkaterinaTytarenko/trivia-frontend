@@ -1,0 +1,100 @@
+*,*::before,*::after{
+  box-sizing:border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+:root{
+  --heu-neutral:200;
+  --heu-wrong:0;
+  --heu-correct:145;
+}
+
+body {
+  --heu:var(--heu-neutral);
+  padding:0;
+  margin: 0;
+  display:flex;
+  font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height: 100vh;
+  background-color: hsl(var(--heu),100%,30%) !important;
+}
+
+body.correct{
+  --heu:var(--heu-correct);
+}
+
+body.wrong{
+  --heu:var(--heu-wrong);
+}
+
+.container{
+  width:800px !important;
+  max-width:80% !important;
+  background-color: white;
+  border-radius: 5px;
+  padding:20px 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid{
+  display:grid;
+  grid-template-columns: repeat(2,auto);
+  gap:10px;
+  margin:20px 0;
+}
+
+.btn{
+  --heu:var(--heu-neutral);
+  background-color: hsl(var(--heu),100%,50%) !important;
+  border: 1px solid hsl(var(--heu),100%,30%) !important;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white !important;
+}
+
+.btn:hover{
+  border-color:black;
+}
+
+.btn.wrong:active{
+  --heu:var(--heu-wrong);
+}
+
+.start-btn, .next-btn{
+  font-size:1.5rem;
+  font-weight:bold;
+  padding: 10px 20px;
+  width:50%;
+}
+
+.control{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 40% 57%;
+  gap:13px;
+  margin:20px 0;
+  text-align: left;
+}
+
+
+
+
+
+
+
